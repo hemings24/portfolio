@@ -1,2 +1,0 @@
-# portfolio
-Paul Hemingway Portfolio
