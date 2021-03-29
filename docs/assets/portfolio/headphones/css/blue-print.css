@@ -1,0 +1,180 @@
+#blue-print{
+   padding: 170px 0px;
+   color: white;
+   background: #232c66;
+   background: -moz-linear-gradient(-45deg, #232c66 1%, #6066f2 100%);
+   background: -webkit-linear-gradient(-45deg, #232c66 1%,#6066f2 100%);
+   background: linear-gradient(135deg, #232c66 1%,#6066f2 100%);
+}
+#blue-print .container::after{
+   content: "";
+   display: table;
+   clear: both;
+}
+/*------------------------------------------Yellow Headphones-----------------------------------------*/
+#blue-print .left-side{
+   width: 60%;
+   float: left;
+}
+#blue-print .left-side img{
+   width: 100%;
+}
+/*----------------------------------------------------------------------------------------------------*/
+#blue-print .right-side{
+   width: 40%;
+   float: left;
+}
+#blue-print .right-side h1{
+   margin-bottom: 70px;
+   line-height: 1.2;
+   text-transform: capitalize;
+   font-size: 4rem;
+   font-weight: 700;
+}
+/*-----------------------------------------Bluetooth/Microphone---------------------------------------*/
+#blue-print .right-side .info-box{
+   padding: 0px 0px 80px;
+}
+#blue-print .right-side .info-box::after{
+   content: "";
+   display: table;
+   clear: both;
+}
+#blue-print .right-side .info-box .col-1{
+   width: 40%;
+   float: left;
+}
+#blue-print .right-side .info-box .col-1 .icon-container{
+   width: 160px;
+   height: 160px;
+   border: 5px solid white;
+   border-radius: 50%;
+   position: relative;
+}
+#blue-print .right-side .info-box .col-1 .icon-container .dashed-circle{
+   width: 130px;
+   height: 130px;
+   margin: 0px auto;
+   border: 2px dashed white;
+   border-radius: 50%;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+#blue-print .right-side .info-box .col-1 .icon-container .fab, #blue-print .right-side .info-box .col-1 .icon-container .fas{
+   position: absolute;
+   top: 40px;
+   left: 50px;
+   font-size: 4.5rem;
+}
+#blue-print .right-side .info-box .col-2{
+   width: 60%;
+   float: left;
+}
+#blue-print .right-side .info-box .col-2 h3{
+   margin-top: 29px;
+   margin-bottom: 30px;
+   font-size: 2rem;
+}
+#blue-print .right-side .info-box .col-2 p{
+   margin-bottom: 15px;
+   font-size: 1rem;
+}
+#blue-print .right-side .info-box .col-2 a{
+   margin-bottom: 15px;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1rem;
+   color: #fea83b;
+}
+/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------TABLET DEVICES-------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:992px){
+#blue-print{
+   padding: 100px 0px;
+}
+/*------------------------------------------Yellow Headphones-----------------------------------------*/
+#blue-print .left-side{
+   width: 40%;
+}
+/*----------------------------------------------------------------------------------------------------*/
+#blue-print .right-side{
+   width: 60%;
+}
+#blue-print .right-side h1{
+   margin-bottom: 70px;
+   line-height: 1.2;
+   text-align: left;
+   text-transform: capitalize;
+   font-size: 3rem;
+   font-weight: 700;
+}
+/*-----------------------------------------Bluetooth/Microphone---------------------------------------*/
+#blue-print .right-side .info-box .col-1{
+   width: 40%;
+   float: left;
+   text-align: center;
+}
+#blue-print .right-side .info-box .col-1 .icon-container{
+   width: 120px;
+   height: 120px;
+   margin: 20px auto 0px;
+}
+#blue-print .right-side .info-box .col-1 .icon-container .dashed-circle{
+   width: 90px;
+   height: 90px;
+}
+#blue-print .right-side .info-box .col-1 .icon-container .fab, #blue-print .right-side .info-box .col-1 .icon-container .fas{
+   position: absolute;
+   top: 30px;
+   left: 40px;
+   font-size: 3rem;
+}}
+/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------MOBILE DEVICES-------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:768px){
+#blue-print{
+   padding: 100px 0px;
+}
+#blue-print img{
+   display: none;
+}
+/*------------------------------------------Yellow Headphones-----------------------------------------*/
+#blue-print .left-side{
+   width: 100%;
+}
+/*----------------------------------------------------------------------------------------------------*/
+#blue-print .right-side{
+   width: 100%;
+}
+#blue-print .right-side h1{
+   margin-bottom: 70px;
+   line-height: 1.2;
+   text-align: center;
+   text-transform: capitalize;
+   font-size: 3rem;
+   font-weight: 700;
+}
+/*-----------------------------------------Bluetooth/Microphone---------------------------------------*/
+#blue-print .right-side .info-box .col-1{
+   width: 40%;
+   float: left;
+   text-align: center;
+}
+#blue-print .right-side .info-box .col-1 .icon-container{
+   width: 120px;
+   height: 120px;
+   margin: 20px auto 0px;
+}
+#blue-print .right-side .info-box .col-1 .icon-container .dashed-circle{
+   width: 90px;
+   height: 90px;
+}
+#blue-print .right-side .info-box .col-1 .icon-container .fab, #blue-print .right-side .info-box .col-1 .icon-container .fas{
+   position: absolute;
+   top: 30px;
+   left: 40px;
+   font-size: 3rem;
+}}

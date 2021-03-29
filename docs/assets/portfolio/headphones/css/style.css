@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import "reset.css";
+@import "header.css";
+@import "top-jumbo.css";
+@import "design-by.css";
+@import "color-collection.css";
+@import "blue-print.css";
+@import "latest.css";
+@import "footer.css";
+.container{
+   max-width: 1400px;
+   margin: 0px auto;
+   padding: 0px 20px;
+}
+.container-fluid{
+   margin: 0px 5%;
+   padding: 0px 20px;
+}
+.box-shadow-down{
+   -webkit-box-shadow: 0px 17px 40px -10px rgba(0,0,0,0.3);
+   -moz-box-shadow: 0px 17px 40px -10px rgba(0,0,0,0.3);
+   box-shadow: 0px 17px 40px -10px rgba(0,0,0,0.3);
+}
+.box-shadow-center{
+   -webkit-box-shadow: 0px 0px 65px 13px rgba(158, 158, 158,0.2);
+   -moz-box-shadow: 0px 0px 65px 13px rgba(158, 158, 158,0.2);
+   box-shadow: 0px 0px 65px 13px rgba(158, 158, 158,0.2);
+}
+input::placeholder{
+   color: #d5e2ea;
+}
