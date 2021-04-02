@@ -1,0 +1,68 @@
+header{
+   margin-bottom: 50px;
+   padding: 30px 20px;
+   font-size: 14px;
+   font-weight: 600;
+}
+header::after{
+   content: "";
+   display: table;
+   clear: both;
+}
+header a{
+   text-decoration: none;
+   color: #4c44c1;
+}
+header .logo{
+   display: inline-block;
+   margin-right: 28px;
+   float: left;
+}
+header .logo img{
+   width: 40px;
+}
+header .menu{
+   display: inline-block;
+   position: absolute;
+   float: left;
+   top: 50px;
+}
+header .menu a{
+   margin-right: 8px;
+   text-transform: uppercase;
+}
+header .header-buttons{
+   display: inline-block;
+   float: right;
+}
+header .header-buttons .blue-btn{
+   border-radius: 35px;
+   padding: 14px 30px;
+   position: relative;
+   top: 20px;
+   text-transform: uppercase;
+   color: white;
+   background: #6066f2;
+}
+header .header-buttons .blue-btn .fas{
+   margin-left: 15px;
+}
+header .header-buttons .orange-btn{
+   border-radius: 35px;
+   padding: 14px 46px;
+   position: relative;
+   top: 20px;
+   text-transform: uppercase;
+   color: white;
+   background: #fea83b;
+}
+/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------TABLET DEVICES-------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:992px){
+header .header-buttons{
+   display: block;
+   position: absolute;
+   top: 90px;
+   left: 120px;
+}}
