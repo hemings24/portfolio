@@ -1,0 +1,212 @@
+---
+layout: iherb
+subject: Order Confirmed
+---
+
+
+<container>
+   <row class="order-header green-line">
+      <columns>
+         <table><tr>
+            <td class="iherb-logo">
+               <a href="https://www.iherb.com" target="_blank">
+                  <img src="{{iherb.image-root}}logo-iherb-green.png" alt="iHerb Logo" width="52"/>
+               </a>
+            </td>
+            <td class="order-tks-msg">
+               <span>Thank You for Your Order</span>
+            </td>
+         </tr></table>
+         <p class="track-info-msg">We’ll send you tracking information when the order ships.</p>
+      </columns>
+   </row>
+</container>
+
+
+<container>
+
+   <row class="order-items">
+      <columns class="ois-container">
+<!---------------------------------------------------------------------------------------------------->
+         <p class="order-number black-line-bot">Order # {{iherb.order.number}}</p>
+<!---------------------------------------------------------------------------------------------------->
+         {{#each iherb.order-items}}
+            <row class="order-item">
+               <columns small="3" large="3" class="oi-container">
+                  <row>
+                     <columns class="item-image">
+                        <a href="{{this.item-url}}" target="_blank">
+                           <img src="{{this.image-root}}{{this.item-image}}" alt="{{this.item-image}}" width="80" height="80"/>
+                        </a>
+                     </columns>
+                  </row>
+               </columns><columns small="9" large="9" class="oi-container">
+                  <row>
+                     <columns small="12" large="9">
+                        <a href="{{this.item-url}}" target="_blank" class="item-desc">
+                           {{this.item-desc}}
+                        </a>
+                        <p class="item-qty grey-dark">QTY: {{this.item-qty}}</p>
+                     </columns><columns small="12" large="3">
+                        <p class="item-total">£{{this.item-total}}</p>
+                     </columns>
+                  </row>
+               </columns>
+            </row>
+         {{/each}}
+<!---------------------------------------------------------------------------------------------------->
+      </columns>
+   </row>
+
+   <row class="order-totals">
+      <columns class="ot-container">
+         <row class="black-line-top">
+            <columns small="12" large="6">
+            </columns><columns small="12" large="6">
+               <row class="collapse">
+<!---------------------------------------------------------------------------------------------------->
+                  <columns small="6" large="6">
+                     <p class="saved">You Saved</p>
+                     <p class="subtotal black-line-thin">Subtotal</p>
+                     <p>Shipping</p>
+                     <p class="rewards">Rewards Credit</p>
+                     <p class="order-total black-line-top">Order Total</p>
+<!---------------------------------------------------------------------------------------------------->
+                  </columns><columns small="6" large="6">
+                     <p class="saved text-right">£{{iherb.order.saving}}</p>
+                     <p class="subtotal black-line-thin text-right">£{{iherb.order.subtotal}}</p>
+                     <p class="text-right">£{{iherb.order.shipping}}</p>
+                     <p class="rewards text-right">£{{iherb.order.rewards-credit}}</p>
+                     <p class="order-total black-line-top text-right">£{{iherb.order.total}}</p>
+                  </columns>
+<!---------------------------------------------------------------------------------------------------->
+               </row>
+            </columns>
+         </row>
+      </columns>
+   </row>
+
+   <row class="ship-pay-info">
+<!---------------------------------------------------------------------------------------------------->
+      <columns small="12" large="6" class="ship-info-container">
+         <p class="ship-pay-header black-line-bot">Shipping Info</p>
+         <p class="ship-pay-with grey-dark">Ship With</p>
+         <p>{{iherb.shipping.ship-with}}</p>
+         <p class="ship-bill-to grey-dark">Ship To</p>
+         <p>{{iherb.shipping.name}}</p>
+         {{#each iherb.shipping.address}}
+            <a class="blue-text-fix">
+               <p class="ship-bill-address">{{this}}</p>
+            </a>
+         {{/each}}
+         <p class="ship-bill-address ship-bill-phone">{{iherb.shipping.phone}}</p>
+         <p class="grey-dark">Estimated Arrival</p>
+         <p class="est-arrive-date">{{iherb.shipping.arrive-date}}</p>
+<!---------------------------------------------------------------------------------------------------->
+      </columns><columns small="12" large="6" class="pay-info-container">
+         <p class="ship-pay-header black-line-bot">Payment Info</p>
+         <p class="ship-pay-with grey-dark">Paid With</p>
+         <p>{{iherb.payment.pay-with}}</p>
+         <p class="ship-bill-to grey-dark">Billing Address</p>
+         <p>{{iherb.payment.name}}</p>
+         {{#each iherb.payment.address}}
+            <a class="blue-text-fix">
+               <p class="ship-bill-address">{{this}}</p>
+            </a>
+         {{/each}}
+         <p class="ship-bill-address ship-bill-phone">{{iherb.payment.phone}}</p>
+         <a href="https://checkout.iherb.com/auth/Account/Login" target="_blank">
+            <table class="view-order"><tr>
+               <td class="view-order-button">
+                  <span>View Order</span>
+               </td>
+            </tr></table>
+         </a>
+         <table><tr>
+            <td class="change-order">
+               <p class="link-ul-fix">-</p>
+               <a href="https://checkout.iherb.com/auth/Account/Login" target="_blank">
+                  Change or cancel order
+               </a>
+               <span>before it ships.</span>
+            </td>
+         </tr></table>
+      </columns>
+<!---------------------------------------------------------------------------------------------------->
+   </row>
+</container>
+
+
+<table class="container"><tr><td class="container-td">
+<!---------------------------------------------------------------------------------------------------->
+   <table class="recommend"><tr>
+      <td class="rm-container black-line-top">
+         <p class="rm-header">You May Also Like</p>
+         <table><tr>
+            {{#each iherb.recommend}}
+               <td class="prod-details">
+                  <a href="{{this.prod-url}}" target="_blank">
+                     <img src="{{this.image-root}}{{this.prod-image}}" alt="{{this.prod-image}}" width="120" height="120"/>
+                     <p>{{this.prod-desc}}</p>
+                     <p class="prod-price">£{{this.prod-price}}</p>
+                  </a>
+               </td>
+            {{/each}}
+         </tr></table>
+      </td>
+   </tr></table>
+<!---------------------------------------------------------------------------------------------------->
+   <table class="rewards-banner"><tr>
+      <td class="background">
+      <!--[if gte mso 9]>
+         <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:552px;height:80px;">
+         <v:fill type="frame" src="{{iherb.image-root}}rewards-background.jpg"/>
+         <v:textbox inset="0,0,0,0">
+      <![endif]-->
+         <table class="rb-container"><tr>
+            <td class="rb-container-left">
+               <table class="content-left"><tr>
+                  <td class="rewards">
+                     <img src="{{iherb.image-root}}rewards-iherb.png" alt="iHerb Rewards" width="145" height="31"/>
+                  </td>
+                  <td class="give-and-get">
+                     <p>Give 5% and Get £5 - Everyday</p>
+                  </td>
+               </tr></table>
+            </td>
+            <td class="rb-container-right text-right">
+               <table class="content-right"><tr>
+                  <td class="learn-more">
+                     <a href="https://www.iherb.com/info/rewards-program" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://tw.iherb.com/info/rewards-program">
+                        <table><tr>
+                           <td class="learn-more-button">
+                              <span>Learn More</span>
+                           </td>
+                        </tr></table>
+                     </a>
+                  </td>
+               </tr></table>
+            </td>
+         </tr></table>
+      <!--[if gte mso 9]>
+         </v:textbox>
+         </v:rect>
+      <![endif]-->
+      </td>
+   </tr></table>
+<!---------------------------------------------------------------------------------------------------->
+   <table class="contact-us"><tr>
+      <td class="cu-container">
+         <table><tr>
+            <td class="headset">
+               <img src="{{iherb.image-root}}icon-headset.png" alt="Headset Icon" width="24" height="24"/>
+            </td>
+            <td class="text">
+               <span>Need help?</span>
+               <a href="https://www.iherb.com/help/contact" target="_blank">Contact Us</a>
+            </td>
+         </tr></table>
+      </td>
+   </tr></table>
+<!---------------------------------------------------------------------------------------------------->
+</td></tr></table>

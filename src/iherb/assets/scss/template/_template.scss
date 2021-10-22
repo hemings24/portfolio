@@ -1,0 +1,626 @@
+/*----------------------------------------------------------------------------------------------------*/
+html,body,div,td,p,span,a{
+   font-family: $global-font-family;
+   font-size: $global-font-size;
+   font-weight: $global-font-weight;
+   color: $global-font-color;
+   @media only screen and (max-width:#{$global-breakpoint}){
+      font-size: $global-font-size-small !important;
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.header{
+   background: $body-background;
+   background-color: $body-background;
+   .columns{
+      padding-top: 18px;
+      padding-bottom: 18px;
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.order-header{
+   .columns{
+      padding-top: 33px;
+      padding-bottom: 35px;
+   }
+   .iherb-logo{
+      width: 52px;
+      padding-bottom: 2px;
+      padding-right: 10px;
+      vertical-align: middle;
+   }
+   .order-tks-msg{
+      border-left: 1px solid $black-bold;
+      padding-top: 3px;
+      padding-bottom: 2px;
+      padding-left: 10px;
+      span{
+         font-size: $font-size-18;
+         font-weight: 700;
+         color: $black-bold;
+         @media only screen and (max-width:#{$global-breakpoint}){
+            font-size: $font-size-18-small !important;
+         }
+         @media only screen and (max-width:360px){
+            font-size: $font-size-18-xs !important;
+         }
+      }
+   }
+   .track-info-msg{
+      margin-top: 28px;
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.order-items{
+   .ois-container{
+      padding-bottom: 22px;
+      .order-number{
+         padding-bottom: 6px;
+         font-weight: 700;
+         color: $black-bold;
+      }
+      .order-item{
+         .oi-container{
+            padding-top: 22px;
+            padding-bottom: 22px;
+            .item-image{
+               padding-top: 3px;
+               img{
+                  width: 80px;
+                  height: 80px;
+                  padding-left: 16px;
+               }
+            }
+            .item-desc{
+               display: block;
+               color: $global-font-color;
+            }
+            .item-qty{
+               padding-top: 5px;
+            }
+            .item-total{
+               padding-right: 18px;
+               text-align: right;
+               font-weight: 700;
+            }
+            @media only screen and (max-width:#{$global-breakpoint}){
+               img{
+                  padding-left: 0px !important;
+               }
+               .item-desc,.item-qty{
+                  padding-left: 16px !important;
+               }
+               .item-total{
+                  padding-right: 0px !important;
+               }
+            }
+         }
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.order-totals{
+   .ot-container{
+      padding-bottom: 40px;
+      p{
+         margin-top: 10px;
+         &.saved{
+            margin-top: 16px;
+            margin-bottom: 16px;
+            font-weight: 900;
+            color: $green-main;
+         }
+         &.subtotal{
+            padding-top: 16px;
+         }
+         &.rewards{
+            margin-bottom: 16px;
+         }
+         &.order-total{
+            padding-top: 16px;
+            font-weight: 900;
+         }
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.ship-pay-info{
+   background: $ship-pay-background;
+   background-color: $ship-pay-background;
+   th{
+      padding-top: 18px;
+   }
+   .ship-info-container{
+      th{
+         padding-right: 28px;
+      }
+   }
+   .pay-info-container{
+      th{
+         padding-bottom: 48px;
+         @media only screen and (max-width:#{$global-breakpoint}){
+            padding-top: 24px !important;
+            padding-right: 28px !important;
+         }
+      }
+   }
+   .ship-pay-header{
+      padding-bottom: 6px;
+      font-weight: 700;
+   }
+   .ship-pay-with{
+      margin-top: 20px;
+      margin-bottom: 3px;
+   }
+   .ship-bill-to{
+      margin-top: 16px;
+      margin-bottom: 3px;
+   }
+   .ship-bill-address{
+      margin-top: 2px;
+   }
+   .ship-bill-phone{
+      margin-bottom: 16px;
+   }
+   .est-arrive-date{
+      margin-top: 3px;
+      font-size: $font-size-18;
+      font-weight: 700;
+      color: $black-bold;
+      @media only screen and (max-width:#{$global-breakpoint}){
+         font-size: $font-size-18-small !important;
+      }
+   }
+   .view-order{
+      display: inline-block;
+      .view-order-button{
+         width: 276px;
+         max-width: 276px;
+         height: 48px;
+         border-radius: 4px;
+         text-align: center;
+         vertical-align: middle;
+         background: $green-main;
+         background-color: $green-main;
+         span{
+            display: inline-block;
+            border: 1px solid $green-main;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: $font-size-13;
+            font-weight: 700;
+            color: #ffffff;
+            @media only screen and (max-width:#{$global-breakpoint}){
+               font-size: $font-size-13-small !important;
+            }
+         }
+      }
+   }
+   .change-order{
+      a{
+         text-decoration: underline;
+         color: $green-main;
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.container{
+   width: $global-width;
+   max-width: $global-width;
+   background: $container-background;
+   background-color: $container-background;
+   @media only screen and (max-width:#{$global-breakpoint}){
+      width: $global-width-small !important;
+   }
+   .container-td{
+      padding-left: $global-gutter;
+      padding-right: $global-gutter;
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.recommend{
+   .rm-container{
+      padding-top: 34px;
+      padding-bottom: 34px;
+      .rm-header{
+         font-size: 16px;
+         font-weight: 700;
+         @media only screen and (max-width:#{$global-breakpoint}){
+            font-size: 16px !important;
+         }
+      }
+      .prod-details{
+         width: 33.33333%;
+         padding-top: 26px;
+         text-align: center;
+         @media only screen and (max-width:#{$global-breakpoint}){
+            display: inline-block !important;
+            width: 100% !important;
+         }
+         img{
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+         }
+         p{
+            margin-top: 9px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+            font-size: 12px;
+            @media only screen and (max-width:#{$global-breakpoint}){
+               font-size: 12px !important;
+            }
+            &.prod-price{
+               margin-top: 3px;
+               font-weight: 700;
+            }
+         }
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.rewards-banner{
+   width: 100%;
+   max-width: $global-width;
+   .background{
+      border-radius: 4px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url($image-root+"rewards-background.jpg");
+      background: #fff09f;
+      background-color: #fff09f;
+      .rb-container{
+         width: 100%;
+         max-width: $global-width;
+         .rb-container-left,.rb-container-right{
+            height: 80px;
+            vertical-align: middle;
+            .content-left,.content-right{
+               display: inline-block;
+               .rewards{
+                  padding-left: 14px;
+                  img{
+                     display: inline-block;
+                     width: 145px;
+                     height: 31px;
+                  }
+               }
+               .give-and-get{
+                  padding-left: 16px;
+                  vertical-align: middle;
+                  p{
+                     font-size: $font-size-13;
+                     font-weight: 700;
+                     color: $black-bold;
+                     @media only screen and (max-width:#{$global-breakpoint}){
+                        font-size: $font-size-13-small !important;
+                     }
+                     @media only screen and (max-width:384px){
+                        font-size: $font-size-13-xs !important;
+                     }
+                  }
+               }
+               .learn-more{
+                  padding-right: 14px;
+                  text-align: right;
+                  .learn-more-button{
+                     width: 120px;
+                     height: 34px;
+                     border-radius: 4px;
+                     text-align: center;
+                     vertical-align: middle;
+                     background: #4c4c4c;
+                     background-color: #4c4c4c;
+                     @media only screen and (max-width:384px){
+                        width: 100px !important;
+                     }
+                     @media only screen and (max-width:360px){
+                        width: 80px !important;
+                     }
+                     @media only screen and (max-width:320px){
+                        width: 70px !important;
+                     }
+                     span{
+                        display: inline-block;
+                        border: 1px solid #4c4c4c;
+                        border-radius: 4px;
+                        font-family: sans-serif;
+                        font-size: $font-size-13;
+                        font-weight: 500;
+                        color: #ffffff;
+                        @media only screen and (max-width:#{$global-breakpoint}){
+                           font-size: $font-size-13-small !important;
+                        }
+                        @media only screen and (max-width:360px){
+                           font-size: $font-size-13-xs !important;
+                        }
+                     }
+                  }
+               }      
+            }
+         }
+      }
+   }
+   @media only screen and (max-width:#{$global-breakpoint}){
+      .rb-container-left,.rb-container-right{
+         text-align: center !important;
+         .rewards,.give-and-get,.learn-more{
+            display: block !important;
+            padding: 0px !important;
+            text-align: center !important;
+         }
+         .give-and-get{
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            p{
+               text-align: center !important;
+            }
+         }
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.contact-us{
+   width: 100%;
+   max-width: $global-width;
+   tr{
+      text-align: center;
+      .cu-container{
+         display: inline-block;
+         padding-top: 34px;
+         padding-bottom: 34px;
+         text-align: center;
+         @media only screen and (max-width:#{$global-breakpoint}){
+            padding-top: 40px !important;
+         }
+         .headset{
+            img{
+               width: 24px;
+               height: 24px;
+            }
+         }
+         .text{
+            padding-left: 8px;
+            vertical-align: middle;
+            span,a{
+               font-weight: 700;
+               color: $grey-dark-font-color;
+            }
+            a{
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+.footer{
+   background: $body-background;
+   background-color: $body-background;
+   .ft-container{
+      padding-top: 32px;
+/*----------------------------------------------------------------------------------------------------*/
+      .footer-top{
+         th{
+            padding-bottom: 32px;
+            text-align: center;
+         }
+         span,a{
+            font-size: 12px;
+            color: $grey-dark-font-color;
+            @media only screen and (max-width:#{$global-breakpoint}){
+               font-size: 12px !important;
+            }
+         }
+         a{
+            padding-left: 1px;
+            padding-right: 1px;
+            text-decoration: underline;
+            color: $green-main;
+         }
+         @media only screen and (max-width:#{$global-breakpoint}){
+            .block{
+               display: block;
+            }
+         }
+      }
+/*----------------------------------------------------------------------------------------------------*/
+      .footer-middle{
+         .iherb-info{
+            padding-left: 3px;
+            img{
+               width: 59px;
+               height: 20px;
+            }
+            .copyright{
+               margin-top: 18px;
+            }
+         }
+         .third-party-links{
+            padding-top: 7px;
+            tr{
+               text-align: center;
+               @media only screen and (max-width:#{$global-breakpoint}){
+                  text-align: right !important;
+               }
+               .soc-med-icon{
+                  display: inline-block;
+                  width: 16px;
+                  padding-left: 13px;
+                  padding-right: 13px;
+                  @media only screen and (max-width:#{$global-breakpoint}){
+                     padding-left: 9px !important;
+                     padding-right: 9px !important;
+                  }
+                  @media only screen and (max-width:414px){
+                     padding-left: 8px !important;
+                     padding-right: 8px !important;
+                  }
+                  @media only screen and (max-width:384px){
+                     padding-left: 6px !important;
+                     padding-right: 6px !important;
+                  }
+                  @media only screen and (max-width:360px){
+                     padding-left: 5px !important;
+                     padding-right: 5px !important;
+                  }
+                  @media only screen and (max-width:320px){
+                     padding-left: 4px !important;
+                     padding-right: 4px !important;
+                  }
+                  img{
+                     width: 16px;
+                     height: 16px;
+                  }
+               }
+               .app-store{
+                  display: inline-block;
+                  width: 107px;
+                  padding-left: 3px;
+                  padding-right: 3px;
+                  vertical-align: bottom;
+                  @media only screen and (max-width:#{$global-breakpoint}){
+                     padding-left: 6px !important;
+                  }
+                  img{
+                     width: 107px;
+                     height: 32px;
+                  }
+               }
+               .spacer{
+                  padding-top: 22px;
+               }
+            }
+         }
+      }
+/*----------------------------------------------------------------------------------------------------*/
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.footer-links{
+   width: 100%;
+   max-width: $global-width;
+   tr{
+      text-align: center;
+      .fl-container{
+         display: inline-block;
+         padding-top: 36px;
+         padding-bottom: 36px;
+         text-align: center;
+         .text,.vbar{
+            padding-left: 5px;
+            padding-right: 5px;
+            vertical-align: middle;
+            a,span{
+               font-size: 11px;
+               color: $grey-dark-font-color;
+               @media only screen and (max-width:#{$global-breakpoint}){
+                  font-size: 11px !important;
+               }
+            }
+         }
+         .vbar{
+            padding-bottom: 1px;
+         }
+      }
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+.grey-dark{
+   font-size: $grey-dark-font-size;
+   color: $grey-dark-font-color;
+   @media only screen and (max-width:#{$global-breakpoint}){
+      font-size: $grey-dark-font-size-small !important;
+   }
+}
+.text-right{
+   text-align: right;
+}
+.blue-text-fix{
+   text-decoration: none;
+}
+.link-ul-fix{
+   font-size: 8px;
+   color: $ship-pay-background;
+   @media only screen and (max-width:#{$global-breakpoint}){
+      font-size: 8px !important;
+   }
+}
+/*----------------------------------------------------------------------------------------------------*/
+.black-line-top{
+   border-top: 2px solid $black-bold;
+}
+.black-line-bot{
+   border-bottom: 2px solid $black-bold;
+}
+.black-line-thin{
+   border-top: 1px solid $black-bold;
+}
+.green-line{
+   border-top: 4px solid $green-main;
+}
+/*----------------------------------------------------------------------------------------------------*/
+@font-face{
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 100;
+   font-display: swap;
+   mso-font-alt: Helvetica;
+   src: local("Roboto-Thin"),
+   url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 300;
+   font-display: swap;
+   mso-font-alt: Helvetica;
+   src: local("Roboto-Light"),
+   url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   mso-font-alt: Helvetica;
+   src: local("Roboto-Normal"),
+   url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   mso-font-alt: Helvetica;
+   src: local("Roboto-Medium"),
+   url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   mso-font-alt: Helvetica;
+   src: local("Roboto-Bold"),
+   url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 900;
+   font-display: swap;
+   mso-font-alt: Helvetica;
+   src: local("Roboto-Black"),
+   url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/*----------------------------------------------------------------------------------------------------*/
