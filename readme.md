@@ -2,7 +2,9 @@
 
 Fully responsive ecommerce website created and developed using PHP, MySQL, HTML, CSS, and Bootstrap.
 
-Fully responsive Rock Band website and Headphones landing page developed and created using HTML, CSS(Flexbox), and Bootstrap.
+Fully responsive building services website created using WordPress.
+
+Fully responsive Headphones landing page developed and created using HTML, CSS(Flexbox), and Bootstrap.
 
 
 HTML emails created and developed using HTML, CSS, and Foundation for Emails framework:
